@@ -49,7 +49,7 @@ jobs:
             - /root/out
       - run:
           command: |
-            mkdir /root/out
+            mkdir -p /root/out
             docker create -v /root/out --name data alpine:3.4 /bin/true
             docker cp /root/out data:/root
       - run:
