@@ -24,6 +24,7 @@ jobs:
             - v1-{{ .Branch }}-{{ checksum  "Dockerfile" }}
           paths:
             - /caches/docker.tar
+      - setup_remote_docker
       - run:
           name: Build docker image
           command: |
